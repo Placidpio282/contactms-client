@@ -25,7 +25,7 @@ const EditContact = () => {
     const handleSumbit = (e) => {
         e.preventDefault()
         axios
-            .put('http://127.0.0.1:3000/contactmsyt/update-contact/' + id, values, {
+            .put('https://contactms-api-eight.vercel.app/contactmsyt/update-contact/' + id, values, {
                 headers: {
                     Authorization: `Berear ${localStorage.getItem('token')}`
                 }
@@ -47,7 +47,7 @@ const EditContact = () => {
 
     useEffect(() => {
         axios
-            .get('http://127.0.0.1:3000/contactmsyt/contact/' + id, {
+            .get('https://contactms-api-eight.vercel.app/contactmsyt/contact/' + id, {
                 headers: {
                     Authorization: `Berear ${localStorage.getItem('token')}`
                 }
