@@ -66,7 +66,7 @@ const App = () => {
   useEffect(() => {
     axios.get('https://contactms-api-eight.vercel.app/contactmsyt/verify', {
       headers: {
-        Authorization: `Berear ${localStorage.getItem('token')}`//Berear
+        Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     })
       .then(res => {
