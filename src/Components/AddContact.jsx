@@ -20,7 +20,7 @@ const AddContact = () => {
 
     const handleSumbit = (e) => {
         e.preventDefault()
-        axios.post('https://contactms-api-eight.vercel.app/contactmsyt/add-contact', values, {
+        axios.post('https://contactms-api-eight.vercel.app/contactms/add-contact', values, {
             headers: {
                 Authorization: `Berear ${localStorage.getItem('token')}`
             }

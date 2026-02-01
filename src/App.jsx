@@ -64,7 +64,7 @@ const router = createBrowserRouter([
 const App = () => {
   const [user, setUser] = useState();
   useEffect(() => {
-    axios.get('https://contactms-api-eight.vercel.app/contactmsyt/verify', {
+    axios.get('https://contactms-api-eight.vercel.app/contactms/verify', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

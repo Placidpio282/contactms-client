@@ -24,9 +24,9 @@ const Register = () => {
     const errs = Validation(values)
     setErrors(errs)
     if (errs.name === "" && errs.email === "" && errs.password === "") {
-      axios.post('https://contactms-api-eight.vercel.app/contactmsyt/register', values)
+      axios.post('https://contactms-api-eight.vercel.app/contactms/register', values)
         .then(res => {
-          if(res.data.success) {
+          if (res.data.success) {
             toast.success("Account Created Successfully", {
               position: "top-right",
               autoClose: 5000
@@ -34,11 +34,11 @@ const Register = () => {
             navigate('/login')
           }
         }).catch(err => {
-           if (err.response.data.errors){
-              setServerErrors(err.response.data.errors)
-           } else {
-             console.log(err)
-           }
+          if (err.response.data.errors) {
+            setServerErrors(err.response.data.errors)
+          } else {
+            console.log(err)
+          }
 
         })
     }
@@ -94,9 +94,9 @@ const Register = () => {
         {
           serverErrors.length > 0 && (
             serverErrors.map((error, index) => (
-                <p className="error" key={index}>{error.msg}</p>
+              <p className="error" key={index}>{error.msg}</p>
             ))
-      
+
           )
         }
         <button className="form-btn">Register</button>

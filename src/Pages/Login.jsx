@@ -26,7 +26,7 @@ const Login = () => {
     const errs = Validation(values)
     setErrors(errs)
     if (errs.email === "" && errs.password === "") {
-      axios.post('https://contactms-api-eight.vercel.app/contactmsyt/login', values)
+      axios.post('https://contactms-api-eight.vercel.app/contactms/login', values)
         .then(res => {
           if (res.data.success) {
             toast.success("Login Successfully", {
