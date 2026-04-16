@@ -100,7 +100,7 @@ const Contacts = () => {
     axios
     .get("https://contactms-api-eight.vercel.app/contactms/contacts", {
       headers: {
-        Authorization: `Berear ${localStorage.getItem('token')}`
+        Authorization: `Bearer ${localStorage.getItem('token')}`
       }
     })
       .then((res) => {
