@@ -27,7 +27,7 @@ const EditContact = () => {
         axios
             .put('https://contactms-api-eight.vercel.app/contactms/update-contact/' + id, values, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                    Authorization: `Berear ${localStorage.getItem('token')}`
                 }
             })
             .then((res) => {
@@ -49,7 +49,7 @@ const EditContact = () => {
         axios
             .get('https://contactms-api-eight.vercel.app/contactms/contact/' + id, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
+                    Authorization: `Berear ${localStorage.getItem('token')}`
                 }
             })
             .then((res) => {
