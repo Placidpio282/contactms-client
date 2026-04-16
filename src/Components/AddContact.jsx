@@ -22,7 +22,7 @@ const AddContact = () => {
         e.preventDefault()
         axios.post('https://contactms-api-eight.vercel.app/contactms/add-contact', values, {
             headers: {
-                Authorization: `Berear ${localStorage.getItem('token')}`
+                Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
             .then(res => {
