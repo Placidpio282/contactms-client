@@ -44,7 +44,7 @@ const Contacts = () => {
         axios
           .delete(`https://contactms-api-eight.vercel.app/contactms/contact/${id}`, {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem('token')}`,
+              Authorization: `Berear ${localStorage.getItem('token')}`,
             },
           })
           .then((res) => {
@@ -100,7 +100,7 @@ const Contacts = () => {
     axios
     .get("https://contactms-api-eight.vercel.app/contactms/contacts", {
       headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
+        Authorization: `Berear ${localStorage.getItem('token')}`
       }
     })
       .then((res) => {
